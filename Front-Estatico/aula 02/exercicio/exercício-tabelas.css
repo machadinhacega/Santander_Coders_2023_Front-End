@@ -1,0 +1,75 @@
+body{
+    font-family: 'Tektur', cursive;
+    font-size: 10px;
+    text-align: left;
+    color: black;
+    font-weight: 400;
+}
+
+/* Pra deixar as bordas juntinhas */
+table{
+    border-collapse: collapse;
+}
+
+
+/* Pra colocar borda */
+th, td{
+    border: 1px solid black;
+
+    padding: 10px 5px;
+ }
+
+ .noBorder {
+    border: none;
+ }
+
+
+.cabecalho{
+    text-align: center;
+}
+
+
+.valores :nth-child(2) {
+    background: #7ebff2;
+}
+.valores :nth-child(3) {
+    background: #4a87ec;
+}
+.valores :nth-child(4) {
+    background: #7073ec;
+}
+
+.valor{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.planos button{
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+}
+
+
+.planos :nth-child(2) button {
+    background: #7ebff2;
+}
+.planos :nth-child(3) button {
+    background: #4a87ec;
+}
+.planos :nth-child(4) button {
+    background: #7073ec;
+}
+
+.planos td {
+    text-align: center;
+}
+
+
+
+
+.exercicio {
+    margin-top: 100px;
+ }
