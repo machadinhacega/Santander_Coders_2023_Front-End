@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="name">Nome</label>
+        <input 
+        type="text" 
+        
+        [key e value]
+        name="Nome"
+        value=""
+        
+        [linka o input com a label]
+        id="name" 
+
+        placeholder="Digite seu nome aqui"  
+        required
+
+        [apenas visualiza]
+        readonly
+
+        [disabilita mesmo]
+        disabled
+
+        [minimo e máximo de caracteres]
+        maxlength="8"
+        minlength="3"
+        >
+
+        <div>
+            <label for="password">Senha</label>
+            <input type="password" name="Senha" id="password"
+            aria-describedby="passwordHelp">
+            <p id="passwordHelp">A senha deve ter pelo menos 5 caracteres</p>
+        </div>
+
+        <input type="number" name="" id=""
+        min="1"
+        max="10">
+
+        <div>
+            <h3>Sorvete</h3>
+            <input type="radio" name="concordo" id="" value="Sim">Sim
+            <input type="radio" name="concordo" id="" value="Não"> Não
+        </div>
+
+        <div>
+            <h3>Sabor</h3>
+            <input type="checkbox" 
+            name="chocolate" id=""> Chocolate
+            <input type="checkbox" 
+            name="baunilha" id="">Baunilha
+        </div>
+
+        <div>
+            <h3>imagem</h3>
+            <input type="file" name="" id=""
+            accept="image/png, image/jpeg">
+        </div>
+
+        <div>
+            <h3></h3>
+            <button>Enviar</button>
+        </div>
+
+    </form>
+    
+</body>
+</html>

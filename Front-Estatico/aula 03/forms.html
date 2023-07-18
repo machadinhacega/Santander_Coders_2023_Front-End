@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./forms.css">
+</head>
+<body>
+
+    <form action="">
+
+        
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            
+            <div><label for="name">Nome</label></div>
+            <input type="text" name="nome" id="name">
+            
+            <div><label for="email">E-mail</label></div>
+            <input type="email" name="email" id="email">
+
+            <div><label for="password">Senha</label></div>
+            <input type="password" name="senha" id="password">
+            
+            <div>
+                <label for="time">Qual o seu time</label>
+            </div>
+            <select name="cidade" id="time">
+                <option selected disabled>Selecione um time</option>
+                <option value="Ceará">Ceará</option>
+                <option value="Fortaleza">Fortaleza</option>
+                <option value="Ferroviario">Ferroviario</option>
+            </select>
+            
+            <div>
+                <div>Comentário</div>
+                <textarea name="" id="comentario" cols=19" rows="8"
+                style="resize: none;"></textarea>
+            </div>
+
+            <div>
+                <!-- unico caso onde o input vai dentro da label -->
+                <label for="aceitoTermos">
+                    <input type="checkbox" name="" id="aceitoTermos">Aceito os termos</label>
+            </div>
+            <div>
+                <br>
+                <button>Enviar</button>
+            </div>
+        </fieldset>
+
+    </form>
+    
+</body>
+</html>
