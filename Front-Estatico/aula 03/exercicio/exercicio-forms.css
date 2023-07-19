@@ -1,7 +1,75 @@
+:root{
+    --principal-color: #4dff74;
+    --second-color: #2ca045;
+    --ligth-color: #fff;
+    --dark-color: #353535;
+}
+
 *{
     box-sizing: border-box;
 }
 
+body {
+    background: var(--dark-color);
+    color: var(--ligth-color);
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
 form div {
-    margin: 20px 0;
+    margin: 20px 0 20px 20px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    margin-top: 5px;
+    height: 32px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    width: 200px;
+    padding: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark-color);
+
+}
+
+#termo{
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+.enviar {
+    padding: 10px 20px;
+    margin: 0 0 20px 20px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: var(--principal-color);
+}
+
+.enviar:hover{
+    background-color: var(--second-color);
+    color: var(--ligth-color);
+}
+
+legend{
+    font-size: 20px;
+    font-weight: 600;
+
+    padding: 0 20px;
 }

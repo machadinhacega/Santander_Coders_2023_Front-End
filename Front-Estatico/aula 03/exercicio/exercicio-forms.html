@@ -6,17 +6,16 @@
     <title>exercicio 03</title>
 
     <link rel="stylesheet" href="./exercicio-forms.css">
-    <script src="./exercicio-forms.js"></script>
+
 </head>
 <body>
-    
     <main>
         <form id="meuFormulario">
             <fieldset>
                 <legend>Formulario de cadastro</legend>
                 <div>
-                    <label for="name">Nome</label>
-                    <input type="text" name="name" id="name">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="name" id="nome">
                 </div>
                 <div>
                     <label for="celular">Celular</label>
@@ -28,7 +27,7 @@
                 </div>
                 <div>
                     <label for="idade">Idade</label>
-                    <input type="number" name="idade" id="idade">
+                    <input type="number" name="idade" id="idade" min="1" max="100">
                 </div>
                 <div>
                     <label for="email">Email</label>
@@ -40,15 +39,17 @@
                 </div>
                 <div>
                     <label for="termo">
-                        <input type="checkbox" name="termo" id="termo"> Aceito todos os termos
+                        <input type="checkbox" name="termo" id="termo" required> Aceito todos os termos
                     </label>
                 </div>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" class="button enviar">Enviar</button>
             </fieldset>
         </form>
     </main>
-
 </body>
+
+<script src="./exercicio-forms.js"></script>
+
 </html>
 
