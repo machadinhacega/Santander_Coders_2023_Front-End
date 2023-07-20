@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Botão para envio e reenvio de formulário</h1>
+    <button id="btnEnviar" aria-label="Botão para envio de formulário" onclick="trocarAriaLabel()">
+      Enviar
+    </button>
+
+    <script>
+      function trocarAriaLabel() {
+        const botaoDeEnvio = document.getElementById("btnEnviar");
+        if (
+          botaoDeEnvio.getAttribute("aria-label") === "Botão para envio de formulário") {
+            botaoDeEnvio.setAttribute(
+                "aria-label",
+                "Botao para reenvio de formulario"
+            );
+        }
+      }     
+    </script>
+  </body>
+</html>
