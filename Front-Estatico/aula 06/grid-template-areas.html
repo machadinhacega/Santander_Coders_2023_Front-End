@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>grid-template-areas</h1>
+    <div class="display-grid grid-template-areas">
+      <div class="item logo">logo</div>
+      <div class="item nav">nav</div>
+      <div class="item sidebar">sidebar</div>
+      <div class="item content">content</div>
+      <div class="item advert">advert</div>
+      <div class="item footer">footer</div>
+    </div>
+
+<style>
+    .item {
+        margin: 5px;
+        background: rgb(71, 166, 255);
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .logo {
+        grid-area: logo;
+      }
+
+      .nav {
+        grid-area: nav;
+      }
+
+      .content {
+        grid-area: content;
+      }
+
+      .footer {
+        grid-area: footer;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+      }
+
+      .advert {
+        grid-area: advert;
+      }
+
+      .display-grid{
+        display: grid;
+      }
+      .grid-template-areas {
+        /*    grid-template-areas:
+          "logo    nav        nav"
+          "sidebar content    advert"
+          "sidebar footer     footer";
+ */
+        gap: 10px 20px;
+        /*  column-gap: 20px; */
+        /*       row-gap: 20px; */
+        grid-template:
+          "logo    nav        nav" 50px
+          "sidebar content    advert" 150px
+          "sidebar footer     footer" 50px / 50px 2fr 150px;
+      }
+</style>
+
+</body>
+</html>
