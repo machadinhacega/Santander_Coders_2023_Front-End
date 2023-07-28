@@ -6,13 +6,16 @@ ___
 ### Exercícios
 
 Exercicio 01  
-[Código](Front-Estatico/aula%2001/exercicio%2001)
+[Código](Front-Estatico/aula%2001/exercicio%2001) | 
+[Visualização](https://machadinhacega.github.io/Santander_Coders_2023_Front-End/Front-Estatico/aula%2001/exercicio%2001/)
 
 Exercicio 02  
-[Código](Front-Estatico/aula%2002/exercicio%2002)
+[Código](Front-Estatico/aula%2002/exercicio%2002) | 
+[Visualização](https://machadinhacega.github.io/Santander_Coders_2023_Front-End/Front-Estatico/aula%2002/exercicio%2002/)
 
 Exercicio 03  
-[Código](Front-Estatico/aula%2003/exercicio%2003)
+[Código](Front-Estatico/aula%2003/exercicio%2003) | 
+[Visualização](https://machadinhacega.github.io/Santander_Coders_2023_Front-End/Front-Estatico/aula%2003/exercicio%2003/)
 
 Exercicio 04  
 [Código](Front-Estatico/aula%2004/exercicio%2004) | 
