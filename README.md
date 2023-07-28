@@ -30,5 +30,10 @@ Exercicio 07
 [Código](Front-Estatico/aula%2007/exercicio%2007) | 
 [Visualização](https://machadinhacega.github.io/Santander_Coders_2023_Front-End/Front-Estatico/aula%2007/exercicio%2007/)
 
+Projeto Final   
+[Modelo](https://html.design/demo/feane/) | 
+[Código](Front-Estatico/projeto-final) | 
+[Visualização](https://machadinhacega.github.io/Santander_Coders_2023_Front-End/Front-Estatico/projeto-final/)
+
 ___
 
