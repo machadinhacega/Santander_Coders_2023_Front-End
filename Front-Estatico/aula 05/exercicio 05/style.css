@@ -1,0 +1,87 @@
+:root{
+    --colorPrimary: #67ad5b;
+    --colorSecondary: #eee;
+    --colorWhite: #fff;
+    --colorTertiary: #f8f8f8;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    text-align: center;
+}
+
+.bg-primary{
+    background: var(--colorPrimary);
+    color: var(--colorWhite);
+}
+
+.pb-4{
+    padding-bottom: 40px;
+}
+
+.pt-2{
+    padding-top: 20px;
+}
+
+.bg-secondary{
+    background: var(--colorSecondary);
+}
+
+.p-1{
+    padding: 10px;
+}
+
+.bg-tertiary{
+    background: var(--colorTertiary);
+}
+
+.bg-white{
+    background: var(--colorWhite);
+    width: 100vh;
+    margin: auto;
+    padding: 20px 10px 0px 20px;
+
+
+}
+
+
+#cardapio h2{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.produto{
+    display: flex;
+    padding-block: 15px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+
+.produto h3{
+    margin: 5px 0 15px 0;
+    font-size: 1rem;
+}
+
+.produto p{
+    font-size: .8rem;
+}
+
+.produto img{
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    margin-right: 10px;
+}

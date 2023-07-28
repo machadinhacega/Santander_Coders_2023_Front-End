@@ -13,5 +13,11 @@ ___
 
 [Exercicio 04](Front-Estatico/aula%2004/exercicio%2004)
 
+[Exercicio 05](Front-Estatico/aula%2005/exercicio%2005)
+
+[Exercicio 06](Front-Estatico/aula%2006/exercicio%2006)
+
+[Exercicio 07](Front-Estatico/aula%2007/exercicio%2007)
+
 ___
 
