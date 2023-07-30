@@ -1,0 +1,45 @@
+/* Efeito zoom das imagens */
+.imagem {
+  overflow: hidden;
+}
+
+.imagem img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+
+.imagem:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Fim do efeito zoom */
+
+/* Links */
+.marginNavLink {
+  color: #212529;
+  padding: 10px 30px;
+}
+
+.menu .nav-link:hover {
+  background: none;
+}
+
+.menu .nav-link:focus {
+  color: #fff;
+  background: #212529;
+}
+
+/* Fim do links */
+
+.widhtHeigth {
+  width: 310px;
+  height: 450px;
+}
+
+.bg-light {
+  height: 180px;
+  border-radius: 4px 4px 0 45px;
+}
