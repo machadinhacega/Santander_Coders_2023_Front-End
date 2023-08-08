@@ -6,3 +6,8 @@ Aula 02
 
 Aula 03  
 [Código](02-Logica/aula-03/exercicios)
+
+
+Projeto Final  
+[Descrição](02-Logica/projeto-final.md) | 
+[Código](02-Logica/projeto-final)
