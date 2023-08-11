@@ -35,28 +35,14 @@ const listaTarefas = [
 
 
 
-
-
-
-
-// - Adicionar uma tarefa
-
 function addTarefa(lista, nome, status){
     lista.push({
         id: lista.length,
         nome: nome,
-        lembrete: '',
-        descricao:'',
         status: status
     })
 }
-addTarefa(listaTarefas, 'beber água', false)
 
-// __________________________________________________________________________________________
-
-
-
-// - Editar uma tarefa salva
 
 function editaTarefa(lista, id, status){
     lista.forEach(tarefa => {
@@ -66,14 +52,6 @@ function editaTarefa(lista, id, status){
     });
 }
 
-editaTarefa(listaTarefas, 2, 'TESTE')
-
-
-// __________________________________________________________________________________________
-
-
-
-// - Remover uma tarefa salva
 
 function removeTarefa(lista, id){
     lista.forEach(tarefa => {
@@ -84,15 +62,6 @@ function removeTarefa(lista, id){
     });
 }
 
-// removeTarefa(listaTarefas, 3)
-
-
-// __________________________________________________________________________________________
-
-
-
-
-// - Listar todas as tarefas salvas
 
 function listarTarefas(lista){
     lista.forEach(tarefa => {
@@ -100,34 +69,21 @@ function listarTarefas(lista){
     });
 }
 
-listarTarefas(listaTarefas)
-
-
-
-
-
-// __________________________________________________________________________________________
-
-// - Obter uma tarefa, através de um parâmetro (id)
 
 function obterTarefa(lista, id){
-    return lista.find(item => item.id === id)
+    lista.forEach(tarefa => {
+        if(tarefa.id === id){
+            console.log(tarefa)
+        }
+    });
 }
 
-console.log(`
-Achar pelo id:`)
-console.log(obterTarefa(listaTarefas, 6))
-console.log('\n')
+addTarefa(listaTarefas, 'beber água', false)
+editaTarefa(listaTarefas, 2, true)
+removeTarefa(listaTarefas, 3)
+listarTarefas(listaTarefas)
+// [!!!] Se chamar uma tarefa deletada, mostra so um espaço vazio - problema da linha 58
+obterTarefa(listaTarefas, 6)
 
 
-// function obterTarefa(lista, id){
-//     // forEach
-//     lista.forEach(tarefa => {
-//         if(tarefa.id === id){
-//             console.log(tarefa)
-//         }
-//     });
-// }
-// obterTarefa(listaTarefas, 6)
 
-// __________________________________________________________________________________________
