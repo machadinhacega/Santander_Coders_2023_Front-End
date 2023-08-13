@@ -425,6 +425,7 @@ console.log(atletas);
 console.log(' \n')
 
 
+// String
 atletas.sort((a, b) => {
     const nomeA = a.nome;
     const nomeB = b.nome;
@@ -438,9 +439,15 @@ atletas.sort((a, b) => {
 })
 console.log('Ordenado por nome: ')
 console.log(atletas);
-
++
 
 
 console.log(``)
 console.log(' \n####################################\n ');
 console.log(``)
+
+
+
+
+// a.nome.localeCompare(b.nome)
+// startsWith('J')

@@ -10,6 +10,9 @@ Aula 03
 Aula 04  
 [Código](02-Logica/aula-04/exercicios/exercicios-metodos.js)
 
+Aula 05  
+[Código](02-Logica/aula-05/exercicios/exercicio.js)
+
 
 
 ### Projeto Final  
