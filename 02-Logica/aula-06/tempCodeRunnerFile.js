@@ -1,0 +1,1 @@
+SobreProduto = Number(taxaImposto.at(0))/100*custo

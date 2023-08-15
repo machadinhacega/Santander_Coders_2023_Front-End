@@ -1,41 +1,72 @@
-// # Lógica de Programação - Projeto final
-
-// ## O que?
-// Desenvolver, utilizando os conceitos abordados ao longo do módulo, 
-// uma aplicação de lista de tarefas (ToDo List).
-
-// ---
-
-// ## Requisitos
-// Dentre as funcionalidades, espera-se que seja possível:
-
-// - Adicionar uma tarefa
-// - Editar uma tarefa salva
-// - Remover uma tarefa salva
-// - Listar todas as tarefas salvas
-// - Obter uma tarefa, através de um parâmetro (id)
-
-// ---
-
-// ## Observações
-// Não haverá a persistência das tarefas em banco de dados. 
-// Para isso, podem utilizar um array para ser a lista das tarefas cadastradas.
 console.clear();
-
 
 // const listaTarefas = []
 const listaTarefas = [
-    {id: 0, nome: 'iniciar projeto', status: true},
-    {id: 1, nome: 'Adicionar uma tarefa', status: false},
-    {id: 2, nome: 'Editar uma tarefa salva', status: false},
-    {id: 3, nome: 'Remover uma tarefa salva', status: false},
-    {id: 4, nome: 'Listar todas as tarefas salvas', status: false},
-    {id: 5, nome: 'Obter uma tarefa, através de um parâmetro (id)', status: false}
+    {id: 0, nome: 'Iniciar projeto', lembrete:'08:00', descricao: 'Lorem ipsum dolor sit amet...', status: true},
+    {id: 1, nome: 'Adicionar uma tarefa', lembrete:'08:00', descricao: 'Lorem ipsum dolor sit amet...', status: false},
+    {id: 2, nome: 'Editar uma tarefa salva', lembrete:'08:00', descricao: 'Lorem ipsum dolor sit amet...', status: false},
+    {id: 3, nome: 'Remover uma tarefa salva', lembrete:'08:00', descricao: 'Lorem ipsum dolor sit amet...', status: false},
+    {id: 4, nome: 'Listar todas as tarefas salvas', lembrete:'08:00', descricao: 'Lorem ipsum dolor sit amet...', status: false},
+    {id: 5, nome: 'Obter uma tarefa, através de um parâmetro (id)', lembrete:'08:00', descricao: 'Lorem ipsum dolor sit amet...', status: false}
 ]
 
 
+// • Adicionar uma tarefa
+//     id | nome | lembrete | descrição | status
 
 
+// • Editar uma tarefa salva
+
+
+// • Remover uma tarefa salva
+
+
+// • Listar todas as tarefas salvas
+
+
+// • Obter uma tarefa, através de um parâmetro (id)
+
+
+
+
+// let titulo = document.getElementById('titulo').value;
+// document.getElementById('tarefaTitulo').textContent = 'hmmmmmm';
+// const listaTeste = ['titulo', 'horario', 'descrição']
+
+
+document.getElementById('tarefas').textContent = "";
+
+for (let i = 0; i < listaTarefas.length; i++) {
+    document.getElementById('tarefas').innerHTML += `
+    
+<div class="container bg-body-secondary gray-default rounded-4 px-4 py-3 mb-4 position-relative">
+<h2 class="mb-0 fs-5 lh-1 mb-2 black-default">${listaTarefas.at(i).nome}</h2>
+<div class="d-flex align-items-baseline">
+    <i class="fa fa-clock-o me-2" aria-hidden="true"></i>
+    <p class="mb-0 fs-7">${listaTarefas.at(i).lembrete}</p>
+</div>          
+<p class="mb-0 fs-8">${listaTarefas.at(i).descricao}</p>
+<a href="" class="icon-link-trash"><i class="fa fa-trash-o position-absolute top-0 end-0 me-3 mt-3" aria-hidden="true"></i></a>
+</div>  
+`
+    
+}
+
+    // // Saída
+    // document.getElementById('veiculo').value = "";
+    // document.getElementById('veiculo').focus();
+    
+    // // document.getElementById('veiculos').textContent = veiculos;
+    
+    // document.getElementById('veiculos').textContent = "";
+    // for (let i = 0; i < veiculos.length; i ++){
+    //     document.getElementById("veiculos").innerHTML += `<li>${veiculos[i]}</li>`
+    // }
+
+
+
+
+// __________________________________________________________________________________________
 
 
 
@@ -50,7 +81,54 @@ function addTarefa(lista, nome, status){
         status: status
     })
 }
-addTarefa(listaTarefas, 'beber água', false)
+
+let tarefaNome = document.getElementById('inputNome').value;
+
+addTarefa(listaTarefas, tarefaNome, false)
+
+console.log(listaTarefas)
+console.log(listaTarefas)
+
+
+
+
+// <label for="inputNome" class="form-label">Nome</label>
+// <input type="text" class="form-control bg-transparent rounded-0 text-green fw-light" id="inputNome" aria-describedby="nomeTarefa">
+
+
+// <label for="">Digite o nome do veículo</label>
+// <input type="text" id="veiculo" autofocus>
+// <button onclick="adicionar()">Adicionar</button>
+
+
+
+// function adicionar() {
+//     // Entrada
+//     let veiculo = document.getElementById('veiculo').value;
+//     if (veiculo){
+//         veiculos.push(veiculo)
+//     }
+//     // Processamento
+
+//     // Saída
+//     document.getElementById('veiculo').value = "";
+//     document.getElementById('veiculo').focus();
+    
+//     // document.getElementById('veiculos').textContent = veiculos;
+    
+//     document.getElementById('veiculos').textContent = "";
+//     for (let i = 0; i < veiculos.length; i ++){
+//         document.getElementById("veiculos").innerHTML += `<li>${veiculos[i]}</li>`
+//     }
+
+//     // console.log(veiculos)
+
+
+// }
+
+
+
+
 
 // __________________________________________________________________________________________
 
