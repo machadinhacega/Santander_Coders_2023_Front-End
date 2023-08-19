@@ -1,0 +1,22 @@
+Plataforma pra freela
+https://www.growyx.com
+
+
+Estudar
+https://www.codewars.com
+
+
+
+
+
+
+
+Assincrono
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Asynchronous
+
+
+Recursividade
+https://www.javascriptprogressivo.net/2018/12/Funcao-Recursiva-Recursividade-Fatorial-Fibonacci.html
+
+Recursividade
+https://ricardo-reis.medium.com/fun%C3%A7%C3%B5es-recursivas-no-javascript-13a1fc099c9f
