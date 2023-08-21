@@ -47,12 +47,14 @@ editarStatus(listaTarefas, 6)(true)
 
 
 // // • Remover uma tarefa salva
+
+
 const removerTarefa = (lista, id) => {
     const index = lista.indexOf(lista.find(tarefa => tarefa.id === id))
-    delete lista[index]
+    lista.splice(id)
 }
-removerTarefa(listaTarefas, 6)
 
+removerTarefa(listaTarefas, 6)
 
 
 
