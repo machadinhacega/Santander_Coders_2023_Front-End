@@ -17,6 +17,6 @@ Aula 04
 
 ### Projeto Final  
 [Descrição do problema](02-Logica/projeto-final.md)  
-[Resultado Individual](02-Logica/projeto-final/projeto-final-1.js)
+[Resultado Individual](02-Logica/projeto-final/projeto-final-1.js)  
 [Resultado Grupo](02-Logica/projeto-final/ToDo_List.js)
 
