@@ -51,8 +51,8 @@ const removerTarefa = (lista, id) => {
     const index = lista.indexOf(lista.find(tarefa => tarefa.id === id))
     delete lista[index]
 }
-
 removerTarefa(listaTarefas, 6)
+
 
 
 
@@ -74,3 +74,4 @@ listarTodasTarefas(listaTarefas)
 // • Obter uma tarefa, através de um parâmetro (id)
 const buscarId = (lista, id) => lista.filter(tarefa => tarefa.id === id)
 buscarId(listaTarefas, 1)
+

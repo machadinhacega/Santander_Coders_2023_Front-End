@@ -10,12 +10,13 @@ Aula 03
 Aula 04  
 [Código](02-Logica/aula-04/exercicios/exercicios-metodos.js)
 
-### Projeto Individual    
+### Projeto Individual  
 [Código](02-Logica/aula-05/exercicios/exercicio.js)
 
 
 
 ### Projeto Final  
 [Descrição do problema](02-Logica/projeto-final.md)  
-[Resultado](02-Logica/projeto-final/ToDo_List.js)
+[Resultado Individual](02-Logica/projeto-final/projeto-final-1.js)
+[Resultado Grupo](02-Logica/projeto-final/ToDo_List.js)
 
