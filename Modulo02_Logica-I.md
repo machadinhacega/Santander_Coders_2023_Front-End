@@ -15,3 +15,7 @@ Aula 04
 
 
 
+### Projeto Final  
+[Descrição do problema](02-Logica/projeto-final.md)  
+[Resultado](02-Logica/projeto-final/ToDo_List.js)
+
