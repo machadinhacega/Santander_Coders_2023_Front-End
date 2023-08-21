@@ -22,24 +22,29 @@ const adicionarTarefa = (lista, nome) => {
 
 adicionarTarefa(listaTarefas, 'Pet the dog')
 
+console.log(listaTarefas);
+console.log('\n###################################################\n\n');
+
+
+
+
+
+
+
 
 
 // • Editar uma tarefa salva
 const editarNome = (lista, id) => nome => lista.find(tarefa => tarefa.id === id).nome = nome
 editarNome(listaTarefas, 6)('Pet the CAT')
 
-// Criar uma condição para caso seja passado um id que não tem
-// let novoUser = {name: '',}
-// // entende uma string vazia como falsy
-// // entende um 0 como um falsy também
-// username = novoUser?.name || 'Visitante'
-// console.log(`Olá ${username}  \n`)
-// // vazio e 0 não é falsy
-// username = novoUser?.name ?? 'Visitante'
-// console.log(`Olá ${username}  \n`)
-
 const editarStatus = (lista, id) => status => lista.find(tarefa => tarefa.id === id).status = status
 editarStatus(listaTarefas, 6)(true)
+
+
+console.log(listaTarefas);
+console.log('\n###################################################\n\n');
+
+
 
 
 
@@ -47,14 +52,19 @@ editarStatus(listaTarefas, 6)(true)
 
 
 // // • Remover uma tarefa salva
-
-
 const removerTarefa = (lista, id) => {
     const index = lista.indexOf(lista.find(tarefa => tarefa.id === id))
     lista.splice(id)
 }
 
 removerTarefa(listaTarefas, 6)
+
+console.log(listaTarefas);
+console.log('\n###################################################\n\n');
+
+
+
+
 
 
 
@@ -69,11 +79,24 @@ const listarTodasTarefas = (lista) => {
 }
 listarTodasTarefas(listaTarefas)
 
+console.log('\n###################################################\n\n');
+
+
+
+
+
+
 
 
 
 
 // • Obter uma tarefa, através de um parâmetro (id)
 const buscarId = (lista, id) => lista.filter(tarefa => tarefa.id === id)
-buscarId(listaTarefas, 1)
+
+console.log(buscarId(listaTarefas, 1));
+
+console.log('\n###################################################\n\n');
+
+
+
 
