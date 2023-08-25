@@ -1,14 +1,25 @@
-Plataforma pra freela
+[Plataforma pra freela]
+
 https://www.growyx.com
 
+___________________________________
 
-Estudar
+
+[Estudar]
+
 https://www.codewars.com
 
+https://www.hackerrank.com
 
 
+___________________________________
 
 
+[Freela]
+
+https://www.growyx.com
+
+___________________________________
 
 
 Assincrono
