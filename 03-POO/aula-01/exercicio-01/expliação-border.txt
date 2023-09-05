@@ -1,0 +1,8 @@
+Claro! A razão pela qual a cor cria um "triângulo perfeito" deve-se à forma como o modelo de bordas do CSS funciona. No CSS, quando você define as bordas de um elemento, elas não são apenas linhas ao redor da caixa; elas realmente formam uma forma trapezoidal. No uso normal, você não percebe isso porque a borda circunda a caixa de conteúdo.
+
+Aqui está o conceito chave:
+Quando você define border-left e border-right como transparentes e border-bottom com uma cor, você cria uma caixa de "altura zero" com trapezoides coloridos e transparentes.
+Devido às configurações width: 0; height: 0;, a caixa de conteúdo essencialmente desaparece, deixando apenas as bordas.
+O border-bottom é a única parte colorida. Como o seu lado superior é adjacente aos border-left e border-right transparentes, o border-bottom colorido forma um triângulo.
+As bordas transparentes border-left e border-right preenchem o que seria o restante do trapezoide, encontrando-se em um ponto acima do border-bottom. Como são transparentes, você só vê a borda inferior, que forma uma forma de triângulo perfeita.
+Essencialmente, é a forma como as bordas se encontram em ângulos que cria esse efeito. Como as bordas esquerda e direita são transparentes e se encontram em um ponto, dá a aparência de um único triângulo de cor sólida. É um truque interessante que aproveita a geometria inerente das bordas do CSS para criar uma forma que você não pensaria imediatamente que é possível com bordas.
