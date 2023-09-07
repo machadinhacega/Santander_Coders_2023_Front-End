@@ -7,6 +7,7 @@ class Catalogo {
     
     salvar(){
         this.adicionarItem()
+        this.limparCampos()
         Item.mostrarTabela()
         this.exportar()
     }
@@ -19,11 +20,9 @@ class Catalogo {
         if (this.edit === false){
             if(Item.validarDados()){
                 this.listaItens.push(Item.lerDados())
-                this.limparCampos()
             }
         } else {
             this.atualizarItem()
-            this.limparCampos()
         }
     }
 
@@ -63,13 +62,9 @@ class Catalogo {
     atualizarItem(){
         for (let i = 0; i < this.listaItens.length; i++) {
             if(this.listaItens[i].id === this.id){
-                if(document.getElementById('nomeProduto').value){
-                    this.listaItens[i].nome = document.getElementById('nomeProduto').value
-                }
+                this.listaItens[i].nome = document.getElementById('nomeProduto').value
                 this.listaItens[i].desc = document.getElementById('descProduto').value
-                if(document.getElementById('valorProduto').value){
-                    this.listaItens[i].valor = document.getElementById('valorProduto').value
-                }
+                this.listaItens[i].valor = document.getElementById('valorProduto').value
                 this.listaItens[i].img = document.getElementById('imgProduto').value
             }
             
@@ -86,32 +81,20 @@ class Catalogo {
 
 
 class Item {
-    // #valorPromocional;
     constructor(){
     }
-
-    // get valorPromocional(){
-    //     return this.#valorPromocional
-    // }
-    // set valorPromocional(valor){
-    //     let desc = valor * 0.2
-    //     this.#valorPromocional = valor - desc;
-    // }
 
     static lerDados(){
         let item = {}
         item.id = Catalogo.id++
         item.nome = document.getElementById('nomeProduto').value;
         item.desc = document.getElementById('descProduto').value;
-        item.valor = parseFloat(document.getElementById('valorProduto').value);
+        item.valor = document.getElementById('valorProduto').value;
         item.img = document.getElementById('imgProduto').value;
-        // item.valorPromocional = valorPromocional(item.valor);
-        // console.log(item);
+
         return item
 
     }
-
-    
 
     static validarDados(){
         let mensagem = 'Você precisa preencher: \n'
@@ -131,7 +114,8 @@ class Item {
 
     static mostrarTabela(){
         let tbody = document.getElementById('tbody')
-        tbody.innerHTML = '';
+        // !!!!!!!!!!!! NÃO ENTENDI PQ TEM QUE TER ESSE INNERHTML
+        tbody.innerHTML = ''
 
         for (let i = 0; i < catalogo.listaItens.length; i++) {
             tbody.innerHTML += `
