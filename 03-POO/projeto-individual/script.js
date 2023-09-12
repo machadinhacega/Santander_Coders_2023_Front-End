@@ -1,9 +1,19 @@
 class Catalogo {
-    static id = 1
+    #id = 1
+    
     constructor(){
         this.listaItens = [];
         this.edit = false
+        this.classe;
     }
+    get id(){
+        return this.#id
+    }
+    set id(id){
+        this.#id = id
+    }
+    
+
     
     salvar(){
         this.adicionarItem()
@@ -85,28 +95,20 @@ class Catalogo {
 }
 
 
+
 class Item {
-    // #valorPromocional;
     constructor(){
     }
+    
 
-    // get valorPromocional(){
-    //     return this.#valorPromocional
-    // }
-    // set valorPromocional(valor){
-    //     let desc = valor * 0.2
-    //     this.#valorPromocional = valor - desc;
-    // }
 
     static lerDados(){
         let item = {}
-        item.id = Catalogo.id++
+        item.id = catalogo.id++
         item.nome = document.getElementById('nomeProduto').value;
         item.desc = document.getElementById('descProduto').value;
         item.valor = parseFloat(document.getElementById('valorProduto').value);
         item.img = document.getElementById('imgProduto').value;
-        // item.valorPromocional = valorPromocional(item.valor);
-        // console.log(item);
         return item
 
     }
