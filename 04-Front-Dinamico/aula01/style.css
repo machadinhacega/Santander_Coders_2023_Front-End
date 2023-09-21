@@ -1,0 +1,103 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Gemunu+Libre:wght@300&display=swap');
+
+
+
+
+:root {
+  --beemoColorCorpo: #1bbbb1;
+  --bmoColorAmarelo: #fbd66c;
+  --bmoColorVermelho: #f05457;
+  --bmoColorDark: #044470;
+  --bmoColorLight: #c6e5d6;
+
+  }
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+body {
+  background-color: var(--beemoColorCorpo) !important;
+  color: #d9ffea !important;
+}
+
+#show {
+  background-color: #fff;
+  color: #000;
+
+}
+
+/* BEEMO */
+
+.beemo{
+  background-color: var(--beemoColorCorpo);
+  border: 1px solid var(--bmoColorDark);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#beemoTitle{
+  padding: 10px 0px;
+  /* font-family: 'DotGothic16', sans-serif;; */
+  font-family: 'Gemunu Libre', sans-serif;
+  font-size: 1.5rem;
+
+}
+
+#beemoDisplay{
+  background-color: var(--bmoColorLight);
+  color: var(--bmoColorDark);
+
+  border: 1.5px solid var(--bmoColorDark);
+}
+.buttons {
+  justify-items: center;
+  align-items: center;
+}
+
+.buttons button{
+  font-weight: 700;
+  color: var(--bmoColorDark);
+  text-align: center;
+}
+
+.btnDefault{
+  background-color: transparent;
+  border: none;
+  
+  width: 50px;
+  height: 50px;
+}
+
+.btnOperations{
+  background-color: var(--bmoColorAmarelo);
+  border: 1px solid var(--bmoColorDark);
+  
+  font-size: .8rem;
+
+  width: 30px;
+  height: 20px;
+  margin: 10px;
+  border-radius: 5px;
+
+}
+
+#btnResult{
+  background-color: var(--bmoColorVermelho);
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+
+/* #currentValue{
+  width: 40%;
+} */
+
+.textPrimary{
+  color: var(--bmoColorDark);
+}
+

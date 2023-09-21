@@ -1,0 +1,30 @@
+.poster-back img{
+    /* width: 20vw; */
+    width: 50vh;
+}
+
+.img-pt{
+    top: 55vh;
+    left:44vw;
+}
+
+/* .poster-campo-nome {
+    position: absolute;
+} */
+
+/* *{
+    border: 1px solid red;
+} */
+
+
+/* .poster-background img[data-v-24a58416] {
+    width: 85vh;
+    filter: brightness(1.1);
+}
+
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+} */
+
