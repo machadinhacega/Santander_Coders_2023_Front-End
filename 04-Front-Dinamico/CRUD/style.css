@@ -1,0 +1,27 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .errorMsg {
+    font-size: .8rem;
+    color: red;
+  }
+  
+  form {
+    margin: 30px;
+  }
+  
+  form div {
+    margin-bottom: 30px;
+  }
+  
+  #geladeira {
+    display: flex;
+  }
+  
+  .elem {
+    border: 1px solid #218c03;
+    margin: 0 10px;
+    /* display: flex; */
+  }

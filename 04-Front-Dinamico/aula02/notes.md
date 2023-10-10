@@ -12,3 +12,7 @@ _____________________________________________________
 
 
 Se for trabalhar com valores fixos, o mais adequado é usar switch case
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <form id="cadastro">
+    <label for="img">IMAGEM</label>
+    <input type="file" name="img" id="img" accept="image/*">
+    <button type="button" id="convertButton">Converter e Enviar</button>
+    <input type="submit" value='envar'>
+  </form>
+  <h1>IMAGEM</h1>
+  <div id="TESTE"></div>
+  
+  <script>
+    cadastro.addEventListener('submit', function () {
+      event.preventDefault()
+      const inputElement = document.getElementById('imgItem');
+      const selectedFile = inputElement.files[0];
+      if (selectedFile) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const base64Image = e.target.result;
+          const jsonImage = { image: base64Image };
+
+          img: jsonImage.image;
+          // Você pode enviar o objeto JSON para o banco de dados aqui
+          console.log(jsonImage);
+
+        // const img = document.createElement("img");  // ---------------- • Imagem do item (LINK)
+        // img.src = item.img;
+        // img.className = "imgElemen";
+        // const link = document.createElement("a") // ------ Link que add o id do item no final do 'href' da página
+        // link.href = `/?id=${item._id}`; // ---------------- vai servir justamente pra identificar que está 'na pagina' de um item especifico
+        // link.appendChild(img)
+
+          
+        // const imagemB = document.createElement("img"); 
+        // imagemB.src = jsonImage.image;
+        // const TESTE = document.getElementById("TESTE")
+        // TESTE.appendChild(imagemB)
+        
+        };
+
+        reader.readAsDataURL(selectedFile);
+      } else {
+        console.error('Nenhuma imagem selecionada.');
+      }
+    });
+  </script>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

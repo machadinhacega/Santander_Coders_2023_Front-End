@@ -1,0 +1,6 @@
+• package json
+vai ter os scripts, é aqui onde configura como starta a aplicação, por exemplo
+npm run start
+	start-dev: ng serve
+	npm run start-dev
+

@@ -1,0 +1,100 @@
+:root {
+  --colorYellowBtn: #DA9D31;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.errorMsg {
+  font-size: .8rem;
+  color: red;
+}
+
+form {
+  margin: 30px;
+}
+
+form div {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input,
+select {
+  /* background-color: red; */
+  width: 50%;
+  height: 30px;
+  border: 1px solid #878787;
+  border-radius: 5px;
+  background: transparent;
+}
+
+#btnSave {
+  width: auto;
+  height: auto;
+  border: 1px solid var(--colorYellowBtn);
+  color: var(--colorYellowBtn);
+}
+
+#btnSave:hover {
+  color: #fff !important;
+  background: var(--colorYellowBtn) !important;
+}
+
+#geladeira {
+  display: flex;
+}
+
+.elem {
+  margin: 0 10px;
+  padding: 10px;
+
+  border: 3px solid #734444;
+  border-radius: 15px;
+
+  background-color: rgba(255, 255, 255, 1)
+}
+
+
+
+#tituloForm {
+  background-color: var(--colorYellowBtn);
+  color: #fff;
+  padding: 15px 0;
+}
+
+
+
+.containerForm {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+.formView {
+  border: 1px solid #472e2e;
+  border-radius: 15px;
+
+  position: relative;
+  display: grid;
+  columns: 1fr;
+  margin: 0 35vw;
+  margin-top: 10vh;
+  /* width: 400px; */
+
+  background: #f9f9e2;
+
+
+}
+
+.imgElemen {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}

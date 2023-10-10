@@ -1,0 +1,43 @@
+const URL = "https://crudcrud.com/api/f44e0b3b47d541469437d51aba44e107/animais";
+
+async function getAnimais() {
+  const response = await fetch(URL);
+  return await response.json();
+}
+
+
+
+// Para cada animal no array de animais, criar um div contendo as informações principais daquele animal, dentro do div container
+arrayAnimais.forEach((animal, index) => {
+  const container = document.querySelector(".container");
+  const elem = document.createElement("div");
+  elem.className = "elem";
+  
+  const img = document.createElement("img");
+  img.src = `images/animal_${index}.jpeg`;
+  img.width = "50";
+  // img.setAttribute("src", "-----")
+  
+  const name = document.createElement("a");
+  name.innerText = animal.nome;
+  name.href = `/registro.html?id=${animal.id}`;
+
+  const btnDelete = document.createElement("button");
+  btnDelete.innerText = "Remover";
+  btnDelete.id = "delete";
+
+  btnDelete.addEventListener("click", () => {
+    if (confirm("Você tem certeza que quer remover este animalzinho indefeso da lista????????")) {
+      arrayAnimais.splice(index, 1);
+      localStorage.setItem("arrayAnimais", JSON.stringify(arrayAnimais));
+      location.reload();
+    }
+  });
+
+  elem.appendChild(img);
+  elem.appendChild(name);
+  elem.appendChild(btnDelete);
+  // elem.append(img, name);
+
+  container.appendChild(elem);
+});
