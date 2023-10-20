@@ -9,7 +9,8 @@
             <!-- {{task.title | currencyFormat: 'BRL' }} -  -->
             <!-- BRL USD  -->
             {{task.description | slice: 0:4 }} - 
-            {{task.date | date:'dd/MM/yy'}}
+            {{task.date | date:'dd/MM/yy'}} -
+            {{task.status}} 
             <!--  COMO FAZER UM IF  -->
             <!-- <div *ngIf="task.title !== 'teste'">
                 {{task.title}} - {{task.description}} - {{task.date}}

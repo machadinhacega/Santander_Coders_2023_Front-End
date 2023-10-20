@@ -10,13 +10,12 @@
         </div>
         <div>
             <label for="status">Status</label>
-            <select name="status" id="status">
-                <option value="status"  disabled selected>Selecione uma opção</option>
-                <option value="status">A fazer</option>
-                <option value="status">Fazendo</option>
-                <option value="status">Feito</option>
+            <select name="status" id="status" name="status" [(ngModel)]="newTask.status">
+                <option disabled selected>Selecione uma opção</option>
+                <option value="toDO" >toDo</option>
+                <option value="doing" >Doing</option>
+                <option value="done" >Done</option>
             </select>
-            <!-- <input id="status" type="text" name="status" [(ngModel)] = "newTask.title"> -->
         </div>
         <div>
             <label for="description">Descrição</label>

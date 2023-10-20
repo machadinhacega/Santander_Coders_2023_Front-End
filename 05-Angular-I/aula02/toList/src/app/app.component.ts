@@ -55,7 +55,8 @@ export class AppComponent implements OnInit, Remover{
     this.listTask.push({
       date: new Date(),
       description: 'tarefa adicionada pelo metodo OnInit',
-      title: 'Tarefa OnInit'
+      title: 'Tarefa OnInit',
+      status: 'toDO'
     })
   }
 
