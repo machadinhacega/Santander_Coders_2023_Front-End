@@ -1,23 +1,23 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Task } from 'src/models/task.model';
 
-// cria um "modelo" pro nosso objeto
-export interface IListTask {
-  title: string;
-  description: string;
-  date: Date;
-}
 
+// ANTERIORMENTE, NESSA PARTE, FOI FEITA UMA INTERFACE, MAS REFATORANDO FOI CRIADA UMA MODEL TASK. (task.model.ts)
+// // cria um "modelo" pro nosso objeto
+// export interface IListTask {
+//   title: string;
+//   description: string;
+//   date: Date;
+// }
+
+// // Recebe todo o modelo da IListTask + o status
+// export interface IListComplet extends IListTask{
+//   status: boolean;
+// }
 
 export declare interface Remover{
   remover():void;
 } 
-
-// Recebe todo o modelo da IListTask + o status
-export interface IListComplet extends IListTask{
-  status: boolean;
-}
-
 
 
 @Component({
@@ -28,13 +28,19 @@ export interface IListComplet extends IListTask{
 export class AppComponent implements OnInit, Remover{
   // um array de IListTasks (Array de objetos) >>> IListTask[] 
   // essa "Task" é a minha model task.model.ts
+  // A gente inicia assim qndo é um array. Quando for um objeto inicia assim: selectedTask = new Task() (linha 41)
   listTask: Task[] = [];
-  listTaskComplet:IListComplet[] = []
+  // listTaskComplet:IListComplet[] = []
 
   isVisible = true;
 
+  // ANTES ESSA VARIAVEL ERA CRIADA ASSIM, MAS DEPOIS Q USAMOS MODEL PASSAMOS COMO "new Model()""
+  // selectedTask: Task | null = null;   
+
   // Variável criada. O valor dela é passado no 'handleTask'
-  selectedTask: Task | null = null;
+  // Essa new Task () é a minha model. Lá ja foiram passados os argumentos dentro do constructor
+  // INICIANDO COMO NULL, JS RESOLVE O PROBLEMA DO FECHARDETALHES()
+  selectedTask: Task | null = null
 
   constructor(){
     console.log('constructor')
@@ -52,7 +58,7 @@ export class AppComponent implements OnInit, Remover{
 
   remover(): void {}
 
-  onAddTask(task: IListTask) {
+  onAddTask(task: Task) {
     // console.log(task)
     this.listTask.push(task);
   }
@@ -70,6 +76,7 @@ export class AppComponent implements OnInit, Remover{
  
   
   fecharDetalhes() {
+    // QNDO REFATOROU USANDO MODEL, PRECISOU MUDAR ESSA LINHA PQ A TASK NAO PODIA SER NULA
     this.selectedTask = null;
   }
 

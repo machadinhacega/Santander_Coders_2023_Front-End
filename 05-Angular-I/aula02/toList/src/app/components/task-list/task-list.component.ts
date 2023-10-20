@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { IListTask } from 'src/app/app.component';
+// import { IListTask } from 'src/app/app.component';
 import { Task } from 'src/models/task.model';
 
 @Component({
@@ -11,7 +11,7 @@ export class TaskListComponent implements OnInit, OnDestroy {
   // esses são os parâmetros quee será enviados para os componentes (mandar por import)
   // a variável 'tasks' é do tipo 'IListTasks
   // Esse tipo (IListTasks) foi definido e exportado do app.ts
-  @ Input() tasks: IListTask[] = [];
+  @ Input() tasks: Task[] = [];
   // Mandando a informação
   @Output() handleTask = new EventEmitter();
 

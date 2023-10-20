@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IListTask } from 'src/app/app.component';
+// import { IListTask } from 'src/app/app.component';
 import { Task } from 'src/models/task.model';
 
 @Component({
@@ -10,7 +10,7 @@ import { Task } from 'src/models/task.model';
 export class TaskDetailsComponent {
   // Esse input vai receber as informações do outro component (task-list) a clicar
   // Ele recebe uma task do tipo Task (definido no pai)
-  @Input() task: IListTask | null = null;
+  @Input() task: Task | null = null;
   // Sempre que eu quero comunicar com o componente PAI, uso um Output
   @Output() closeDetail = new EventEmitter();
 

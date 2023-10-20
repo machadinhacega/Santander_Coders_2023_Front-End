@@ -19,7 +19,10 @@ export class TaskFormComponent {
     // como parâmetro da função addTask coloca o valor q quer mandar para o PAI
     // Quando apertar no botão (submitTask) vai enviar as informações (this.nweTask) pro Pai
     // {...} >>> pra criar uma referencia pra cada task nova
-    this.addTask.emit({...this.newTask}); 
+    // DE POIS DE REFATORAR UTILIZANDO MODEL, ESSA LINHA FOI ALTERADA (ver linha 25)
+    // this.addTask.emit({...this.newTask}); 
+    // NÃO PRECISA DESESTRTURAR POR QUE NAO VAI TER MAIS O PROBLEMA DE REFENCIA COM DO OBJETO
+    this.addTask.emit(this.newTask)
     // console.log(this.newTask)
   }
 
