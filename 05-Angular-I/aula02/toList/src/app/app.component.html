@@ -1,0 +1,18 @@
+<app-task-form (addTask)="onAddTask($event)"></app-task-form>
+
+
+
+<div>
+    <p></p>
+    <button (click)="mostrarLista()">Mostrar task-list (LISTA)</button>
+</div>
+<div *ngIf = "isVisible">
+    <!-- handleTask esta no task.list.ts            | handleTaskApp esta no app.ts          -->
+    <app-task-list [tasks]="listTask" (handleTask)="handleTaskApp($event)"></app-task-list>
+</div>
+
+<div *ngIf="selectedTask">
+<!--                                  no task-details.ts  | no app.ts   -->
+<!--                                                      | nao precisa reeber o event pq nao vai fzer nada com ele  -->
+    <app-task-details [task]="selectedTask " (closeDetail) = "fecharDetalhes()"></app-task-details> <!-- Ebvua a selectedTask -->
+</div>

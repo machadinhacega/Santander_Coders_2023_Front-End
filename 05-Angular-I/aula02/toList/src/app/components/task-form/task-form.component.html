@@ -1,0 +1,22 @@
+<div>
+    <h1>TODO LIST</h1>
+</div>
+
+<div>
+    <form>
+        <div>
+            <label for="titulo">Título</label>
+            <input id="titulo" type="text" name="titulo" [(ngModel)] = "newTask.title">
+        </div>
+        <div>
+            <label for="description">Descrição</label>
+            <!-- <input id="description" type="text" name="description" [(ngModel)] = "newTask.description"> -->
+            <div><textarea  style="resize: none" name="description" id="description" cols="30" rows="10" [(ngModel)] = "newTask.description"></textarea></div>
+        </div>
+        <div>
+            <label for="date">Data de vencimento</label>
+            <input id="date" type="date" name="date" [(ngModel)] = "newTask.date">
+        </div>
+        <button type="button" (click)="submitTask()" >Adicionar Tarefa</button>
+    </form>
+</div>
