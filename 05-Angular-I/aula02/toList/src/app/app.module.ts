@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TaskTableComponent } from './components/task-table/task-table.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TaskFormComponent,
     TaskListComponent,
     CurrencyFormatPipe,
-    TaskDetailsComponent
+    TaskDetailsComponent,
+    TaskTableComponent
   ],
   imports: [
     BrowserModule,

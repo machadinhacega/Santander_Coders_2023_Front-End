@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Task } from 'src/models/task.model';
 
 @Component({
   selector: 'app-task-form',
@@ -9,11 +10,7 @@ export class TaskFormComponent {
 
   @Output() addTask = new EventEmitter()
 
-  public newTask = {
-    title: '',
-    description: '',
-    date: new Date()
-  };
+  public newTask = new Task();
 
   submitTask(){
     // como parâmetro da função addTask coloca o valor q quer mandar para o PAI
@@ -22,7 +19,8 @@ export class TaskFormComponent {
     // DE POIS DE REFATORAR UTILIZANDO MODEL, ESSA LINHA FOI ALTERADA (ver linha 25)
     // this.addTask.emit({...this.newTask}); 
     // NÃO PRECISA DESESTRTURAR POR QUE NAO VAI TER MAIS O PROBLEMA DE REFENCIA COM DO OBJETO
-    this.addTask.emit(this.newTask)
+    this.addTask.emit(this.newTask);
+    this.newTask = new Task();
     // console.log(this.newTask)
   }
 

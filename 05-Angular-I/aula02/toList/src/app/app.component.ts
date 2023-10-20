@@ -40,7 +40,10 @@ export class AppComponent implements OnInit, Remover{
   // Variável criada. O valor dela é passado no 'handleTask'
   // Essa new Task () é a minha model. Lá ja foiram passados os argumentos dentro do constructor
   // INICIANDO COMO NULL, JS RESOLVE O PROBLEMA DO FECHARDETALHES()
-  selectedTask: Task | null = null
+  selectedTask: Task | null = null;
+
+
+  listTaskToTable: Task[] = [];
 
   constructor(){
     console.log('constructor')
@@ -60,7 +63,9 @@ export class AppComponent implements OnInit, Remover{
 
   onAddTask(task: Task) {
     // console.log(task)
-    this.listTask.push(task);
+  // na lista de tasks vai ser adicionada uma nova task. Essa nova task é a task enviada pelo form
+    this.listTask.push(task)
+    // this.listTask.push(new Task(task));
   }
 
   mostrarLista(){
@@ -72,6 +77,9 @@ export class AppComponent implements OnInit, Remover{
   //  Quando clicar no ngFor (app.html) vai passar o valor da task (task of tasks) para a função handle e receber aqui
   handleTaskApp(task: Task){
     this.selectedTask = task;
+
+    // alem de selecionar a task, vou dar um PUSH para a lista da TABELA
+    this.listTaskToTable.push(task)
   }
  
   
@@ -80,4 +88,5 @@ export class AppComponent implements OnInit, Remover{
     this.selectedTask = null;
   }
 
+ 
 }

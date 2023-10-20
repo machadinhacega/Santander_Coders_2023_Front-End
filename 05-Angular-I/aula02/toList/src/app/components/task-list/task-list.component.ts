@@ -15,6 +15,7 @@ export class TaskListComponent implements OnInit, OnDestroy {
   // Mandando a informação
   @Output() handleTask = new EventEmitter();
 
+
   interval: any;
   
   teste(){
@@ -39,5 +40,6 @@ export class TaskListComponent implements OnInit, OnDestroy {
     //  vai dizer "ei, vc foi clicado"
     this.handleTask.emit(task)
   }
+
 
 }
