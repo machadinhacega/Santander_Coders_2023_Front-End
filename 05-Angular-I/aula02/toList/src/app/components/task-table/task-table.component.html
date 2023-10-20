@@ -11,8 +11,8 @@
         <tbody>
             <tr *ngFor="let task of listTaskToTable">
                 <td>{{task.title}}</td>
-                <td>Descrição dessa tarefa exemplo</td>
-                <td>20/10/23</td>
+                <td>{{task.description}}</td>
+                <td>{{task.date}}</td>
             </tr>
         </tbody>
     </table>

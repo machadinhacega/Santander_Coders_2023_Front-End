@@ -42,7 +42,7 @@ export class AppComponent implements OnInit, Remover{
   // INICIANDO COMO NULL, JS RESOLVE O PROBLEMA DO FECHARDETALHES()
   selectedTask: Task | null = null;
 
-
+  // Variavel do tipo Task Array para receber as tasks por push 
   listTaskToTable: Task[] = [];
 
   constructor(){

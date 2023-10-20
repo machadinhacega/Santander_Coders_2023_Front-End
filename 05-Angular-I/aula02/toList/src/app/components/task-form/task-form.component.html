@@ -9,6 +9,16 @@
             <input id="titulo" type="text" name="titulo" [(ngModel)] = "newTask.title">
         </div>
         <div>
+            <label for="status">Status</label>
+            <select name="status" id="status">
+                <option value="status"  disabled selected>Selecione uma opção</option>
+                <option value="status">A fazer</option>
+                <option value="status">Fazendo</option>
+                <option value="status">Feito</option>
+            </select>
+            <!-- <input id="status" type="text" name="status" [(ngModel)] = "newTask.title"> -->
+        </div>
+        <div>
             <label for="description">Descrição</label>
             <!-- <input id="description" type="text" name="description" [(ngModel)] = "newTask.description"> -->
             <div><textarea  style="resize: none" name="description" id="description" cols="30" rows="10" [(ngModel)] = "newTask.description"></textarea></div>
