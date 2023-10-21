@@ -23,5 +23,5 @@ Aula 04
 [Anotações](05-Angular-I/aula04/notes.md) 
 
 Aula 05  
-[Anotações](05-Angular-I/aula05/notes.md) 
-[Passp a Passp do Filtro](05-Angular-I/aula05/notes-filtrar) 
+[Anotações](05-Angular-I/aula05/notes.md)  
+[Passo a Passo do Filtro](05-Angular-I/aula05/notes-filtrar) 
