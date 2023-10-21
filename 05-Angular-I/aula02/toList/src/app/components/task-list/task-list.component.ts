@@ -16,6 +16,8 @@ export class TaskListComponent implements OnInit, OnDestroy {
   @Output() handleTask = new EventEmitter();
 
 
+  tasksFiltradas: Task[] = [];
+
   interval: any;
   
   teste(){
@@ -25,14 +27,21 @@ export class TaskListComponent implements OnInit, OnDestroy {
   // Quando Inicia ESSA aplicação. O task-list
   ngOnInit(){
     console.log('Iniciou o task-list')
+
+    // AQUI FOI PRA MOSTRAR QUE INICI ASSIM Q RODA O COMPONENTE
+    // E PARA PARAR A CONTAGEM, POR EXEMPLO, PRECISARIA RODAR O DESTROY
     // this.interval = setInterval(() => {
     //   console.log('segundos');
     // },1000)
+
+    // Como minhas tasks filtradas tão inicializando vazias, vou iniciar ja mostrando. Já passando o filtro
+    // this.handleFilter('all')
+    this.tasksFiltradas = this.tasks
   }
 
   ngOnDestroy(): void {
     console.log('Fechou o task-list')
-    clearInterval(this.interval)
+    // clearInterval(this.interval)
   }
 
   selectedTask(task: Task){
@@ -42,9 +51,21 @@ export class TaskListComponent implements OnInit, OnDestroy {
   }
 
   handleFilter(filter:string){
-    console.log(filter)
+    if(filter === 'all'){
+      this.tasksFiltradas = this.tasks;
+      console.log(this.tasksFiltradas)
+      return;
+    }
+    this.tasksFiltradas = this.tasks.filter(item => {
+      if(item.status === filter){
+        return item;
+      }
+      return
+    })
+
+    console.log(this.tasksFiltradas)
   }
 
-  
+
 
 }

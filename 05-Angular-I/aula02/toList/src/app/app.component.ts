@@ -56,11 +56,60 @@ export class AppComponent implements OnInit, Remover{
   ngOnInit(){
     console.log('INICIEI APP')
     this.listTask.push({
-      date: new Date(),
+      date: new Date('2023-11-02'),
       description: 'tarefa adicionada pelo metodo OnInit',
       title: 'Tarefa OnInit',
       status: 'toDO'
     })
+    this.listTask.push({
+      date: new Date('2023-11-02'),
+      title: 'Coringar',
+      description: 'HAHAHAHAHHAHAHA',
+      status: 'doing'
+    })
+    this.listTask.push({
+      date: new Date('2023-11-02'),
+      description: 'sempre',
+      title: 'Sofrer',
+      status: 'done'
+    })
+    this.listTask.push({
+      date: new Date('2023-11-02'),
+      description: 'às 23:47',
+      title: 'Ir de arrasta',
+      status: 'toDO'
+    })
+    this.listTask.push({
+      date: new Date('2023-11-02'),
+      description: 'simbora',
+      title: 'Estudar ne',
+      status: 'done'
+    })
+    this.listTask.push({
+      date: new Date('2023-11-02'),
+      description: 'às 23:47 também',
+      title: 'Submarinar',
+      status: 'toDO'
+    })
+    this.listTask.push({
+      date: new Date('2023-11-02'),
+      description: 'todos os dias',
+      title: 'Se indignar',
+      status: 'doing'
+    })
+    this.listTask.push({
+      date: new Date('2023-11-02'),
+      description: 'izimaliacoisalindademeudeuso',
+      title: 'Fazer carinho na gata',
+      status: 'done'
+    })
+    this.listTask.push({
+      date: new Date('2023-11-02'),
+      description: 'vagabundo vei',
+      title: 'Xingar o vizinho',
+      status: 'done'
+    })
+
   }
 
   remover(): void {}

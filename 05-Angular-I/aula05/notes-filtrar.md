@@ -122,6 +122,58 @@ Que, por sua vez, é um EventEmitter.
 O "onChangeFilter" recebe o filter que é emitido pela função "selectFilter()".
 Função essa que é chamada mp filter.html e recebe o valor do select que foi recebido pelo ngModel.
 
+##
+
+### Para FILTRAR mesmo agora:
+
+>list.ts
+
+• Criar variável "tasksFiltradas"
+    
+    tasksFiltradas: Task[] = [];
+
+• Dentro da handleFilter() atribuir um filtro à tasksFIltradas
+
+    handleFilter(filter:string){
+        this.tasksFiltradas = this.tasks.filter(item => {
+        if(item.status === filter){
+            return item;
+        }
+      return
+    })
+
+    console.log(this.tasksFiltradas)
+    }
 
 
+• Para mostras também TODAS as tarefas, podemos add um if antes do filtro
 
+    handleFilter(filter:string){
+    if(filter === 'all'){
+        this.tasksFiltradas = this.tasks;
+        console.log(this.tasksFiltradas)
+        return;
+    }
+    this.tasksFiltradas = this.tasks.filter(item => {
+        if(item.status === filter){
+        return item;
+        }
+        return
+    })
+
+    console.log(this.tasksFiltradas)
+    }
+
+• Agora pra realmente mostrar na tela, temos que ir no list.html e trocar tasks por tasksFiltradas
+>list.html
+
+     <div *ngFor="let task of tasksFiltradas"   [ngClass]="{'d-none': task.title === 'teste'}">
+
+
+• Apos isso basta inicialinar com um ngOnInit as tasksFIltradas ja com todasas tasks:
+    ngOnInit(){
+        this.tasksFiltradas = this.tasks
+    }
+
+
+### SHOW
