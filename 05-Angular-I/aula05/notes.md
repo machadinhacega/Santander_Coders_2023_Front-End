@@ -20,3 +20,6 @@ Output que vai mandar embora uma informação
 A diretiva serve para aplicar uma logica especifica em varias partes da minha aplicação sem precisar repetir o codigo em cada parte. Qm for usar a logica da diretiva, apenas a chama no html.
 Usa a diretiva para quebrar as coisas em logica e reutilizar essa lógica em outros componentes
 
+##
+
+

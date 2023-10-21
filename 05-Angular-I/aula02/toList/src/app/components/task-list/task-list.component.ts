@@ -41,5 +41,10 @@ export class TaskListComponent implements OnInit, OnDestroy {
     this.handleTask.emit(task)
   }
 
+  handleFilter(filter:string){
+    console.log(filter)
+  }
+
+  
 
 }

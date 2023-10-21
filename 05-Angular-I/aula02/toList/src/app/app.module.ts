@@ -14,6 +14,7 @@ import { ExemploPaiComponent } from './components/exemplo-pai/exemplo-pai.compon
 import { ExemploFilhoComponent } from './components/exemplo-filho/exemplo-filho.component';
 import { BgRedDirective } from './directives/bg-red.directive';
 import { DateWarningDirective } from './directives/date-warning.directive';
+import { TaskFilterComponent } from './components/task-filter/task-filter.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DateWarningDirective } from './directives/date-warning.directive';
     ExemploPaiComponent,
     ExemploFilhoComponent,
     BgRedDirective,
-    DateWarningDirective
+    DateWarningDirective,
+    TaskFilterComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,8 @@
 
 <div>
     <h2>Tarefas</h2>
+    <!-- onChangeFilter é a variavel q eu dei OUTPUT no meu filter.ts -->
+    <app-task-filter (onChangeFilter)="handleFilter($event)"></app-task-filter>
 
     <div *ngFor="let task of tasks"   [ngClass]="{'d-none': task.title === 'teste'}">
         <div appDateWarning [task] = task (click)="selectedTask(task)">
