@@ -4,7 +4,7 @@
     <h2>Tarefas</h2>
 
     <div *ngFor="let task of tasks"   [ngClass]="{'d-none': task.title === 'teste'}">
-        <div (click)="selectedTask(task)">
+        <div appDateWarning [task] = task (click)="selectedTask(task)">
             {{task.title}} - 
             <!-- {{task.title | currencyFormat: 'BRL' }} -  -->
             <!-- BRL USD  -->

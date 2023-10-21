@@ -45,6 +45,9 @@ export class AppComponent implements OnInit, Remover{
   // Variavel do tipo Task Array para receber as tasks por push 
   listTaskToTable: Task[] = [];
 
+
+  diretiveNumber = 25
+
   constructor(){
     console.log('constructor')
   }

@@ -10,6 +10,10 @@ import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TaskTableComponent } from './components/task-table/task-table.component';
+import { ExemploPaiComponent } from './components/exemplo-pai/exemplo-pai.component';
+import { ExemploFilhoComponent } from './components/exemplo-filho/exemplo-filho.component';
+import { BgRedDirective } from './directives/bg-red.directive';
+import { DateWarningDirective } from './directives/date-warning.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { TaskTableComponent } from './components/task-table/task-table.component
     TaskListComponent,
     CurrencyFormatPipe,
     TaskDetailsComponent,
-    TaskTableComponent
+    TaskTableComponent,
+    ExemploPaiComponent,
+    ExemploFilhoComponent,
+    BgRedDirective,
+    DateWarningDirective
   ],
   imports: [
     BrowserModule,

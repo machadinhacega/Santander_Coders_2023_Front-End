@@ -14,9 +14,16 @@
 <div *ngIf="selectedTask">
 <!--                                  no task-details.ts  | no app.ts   -->
 <!--                                                      | nao precisa reeber o event pq nao vai fzer nada com ele  -->
-    <app-task-details [task]="selectedTask " (closeDetail) = "fecharDetalhes()"></app-task-details> <!-- Ebvua a selectedTask -->
+    <app-task-details  [task]="selectedTask " (closeDetail) = "fecharDetalhes()"></app-task-details> <!-- Ebvua a selectedTask -->
 </div>
 
 
 
 <app-task-table [listTaskToTable]="listTaskToTable" ></app-task-table>
+
+
+<app-exemplo-pai></app-exemplo-pai>
+
+<h4 appBgRed [numero] = "10">DIRETIVAS - bg red</h4>
+<h4 appBgRed [numero] = diretiveNumber>DIRETIVAS - Número vindo do app component</h4>
+
