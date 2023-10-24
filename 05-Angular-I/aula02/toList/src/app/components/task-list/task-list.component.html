@@ -1,19 +1,15 @@
 
 
-<div>
-    <div class="text-center d-flex align-content-center justify-content-center">
-        <h2 class="bg-warning w-100 mx-5 mb-4">Tarefas</h2>
-    </div>
-    
+<div>    
     <div class="container d-grid">
         <div class="row">
             <div *ngFor="let titulo of ['toDO', 'doing', 'done']" class="col">
                 <h3 class="bg-dark text-warning text-center mb-3">{{titulo}}</h3>
                 <ng-container *ngFor="let task of tasks">
-                    <div *ngIf="task.status == titulo" class="rounded-1 border border-2 mb-3 ps-2 pt-2">
+                    <div *ngIf="task.status == titulo" class="rounded-1 border border-2 p-2 mb-3" (click)="selectedTask(task)">
                         <h5 class="mb-0">{{task.title}}</h5>
                         <p class="my-0">Data de entrega: {{task.date | date:'dd/MM'}}</p>
-                        <p class="mt-0 fs-6 fw-light">{{task.description}}</p>
+                        <!-- <p class="mt-0 fs-6 fw-light">{{task.description}}</p> -->
                     </div>
                 </ng-container>
             </div>
@@ -26,27 +22,32 @@
 
     
     <!-- onChangeFilter é a variavel q eu dei OUTPUT no meu filter.ts -->
-    <app-task-filter (onChangeFilter)="handleFilter($event)"></app-task-filter>
+    
+    <!-- <app-task-filter (onChangeFilter)="handleFilter($event)"></app-task-filter>
     <div *ngFor="let task of tasksFiltradas"   [ngClass]="{'d-none': task.title === 'teste'}">
         <div appDateWarning [task] = task (click)="selectedTask(task)">
-            {{task.title}} - 
+            {{task.title}} -  -->
+
             <!-- {{task.title | currencyFormat: 'BRL' }} -  -->
             <!-- BRL USD  -->
-            {{task.description | slice: 0:4 }} - 
+
+            <!-- {{task.description | slice: 0:4 }} - 
             {{task.date | date:'dd/MM/yy'}} -
-            {{task.status}} 
+            {{task.status}}  -->
+            
             <!--  COMO FAZER UM IF  -->
             <!-- <div *ngIf="task.title !== 'teste'">
                 {{task.title}} - {{task.description}} - {{task.date}}
             </div> -->
-        </div>
+        <!-- </div>
     </div>
 
     <div>
         <p></p>
-    </div>
+    </div> -->
 
 </div>
 
 <!--   (evento) = "função()""        -->
-<button (click)="teste()">Mostrar Console</button>
+
+<!-- <button (click)="teste()">Mostrar Console</button> -->

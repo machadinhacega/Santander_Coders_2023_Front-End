@@ -1,17 +1,13 @@
-<div class="text-center mt-3">
-    <h1 class="bg-dark fw-bold text-white">TO<span class="text-warning">DO</span><span class="fw-light">LIST</span></h1>
-</div>
-
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center mt-4">
     <form>
         <div class="d-flex">
             <div class="me-3">
                 <label for="titulo" class="d-block">Título</label>
-                <input id="titulo" type="text" name="titulo" [(ngModel)] = "newTask.title" class="h-50 py-2 rounded-2 border-1">
+                <input id="titulo" type="text" name="titulo" [(ngModel)] = "newTask.title" class="h-50 py-3 rounded-2 border-1 ps-2">
             </div>
             <div>
                 <label for="status" class="d-block">Status</label>
-                <select name="status" id="status" name="status" [(ngModel)]="newTask.status" class="h-50 py-2 rounded-2 border-1">
+                <select name="status" id="status" name="status" [(ngModel)]="newTask.status" class=" py-2 rounded-2 border-1 ps-2">
                     <option disabled selected>Selecione uma opção</option>
                     <option value="toDO" >toDo</option>
                     <option value="doing" >Doing</option>
@@ -22,12 +18,14 @@
         <div>
             <label for="description" class="d-block">Descrição</label>
             <!-- <input id="description" type="text" name="description" [(ngModel)] = "newTask.description"> -->
-            <div><textarea  style="resize: none" class="w-100" name="description" id="description" [(ngModel)] = "newTask.description"></textarea></div>
+            <div><textarea  style="resize: none" class="w-100 rounded-2 border-1 ps-2 py-2" name="description" id="description" [(ngModel)] = "newTask.description"></textarea></div>
         </div>
-        <div>
-            <label for="date">Data de vencimento</label>
-            <input id="date" type="date" name="date" [(ngModel)] = "newTask.date">
+        <div class="d-flex align-items-center mt-2">
+            <label for="date" class="me-2 w-50">Data de entrega da tarefa:</label>
+            <input id="date" type="date" name="date" [(ngModel)] = "newTask.date" class="rounded-2 border-1 py-2 ps-2 w-50">
         </div>
-        <button type="button" (click)="submitTask()" class="btn btn-primary" >Adicionar Tarefa</button>
+        <div class="text-end mt-4">
+            <button type="button" (click)="submitTask()" class="btn btn-primary" >Adicionar Tarefa</button>
+        </div>
     </form>
 </div>

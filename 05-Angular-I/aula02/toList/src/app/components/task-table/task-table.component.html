@@ -1,19 +1,21 @@
-<div class="mt-5">
-    <h2>Exercício Tabela</h2>
-    <table class="table w-25">
-        <thead>
-            <tr>
-                <th>Titulo</th>
-                <th>Descrição</th>
-                <th>Data</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let task of listTaskToTable">
-                <td>{{task.title}}</td>
-                <td>{{task.description}}</td>
-                <td>{{task.date}}</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="d-grid">
+    <div class="">
+        <h3 class="fw-bold">Tabela de Log</h3>
+        <table class="table w-25">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of listTaskToTable">
+                    <td>{{task.title}}</td>
+                    <td>{{task.description}}</td>
+                    <td>{{task.date}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
