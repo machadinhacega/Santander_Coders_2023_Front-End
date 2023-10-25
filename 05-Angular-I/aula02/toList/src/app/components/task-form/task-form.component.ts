@@ -1,4 +1,6 @@
+import { NgFor } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Task } from 'src/models/task.model';
 
 @Component({
@@ -12,7 +14,10 @@ export class TaskFormComponent {
 
   public newTask = new Task();
 
-  submitTask(){
+  submitTask(form: NgForm){
+    // form é a variavel criada dentro do meu formulario para validar o envio
+    if(!form.valid) return
+    
     // como parâmetro da função addTask coloca o valor q quer mandar para o PAI
     // Quando apertar no botão (submitTask) vai enviar as informações (this.nweTask) pro Pai
     // {...} >>> pra criar uma referencia pra cada task nova
