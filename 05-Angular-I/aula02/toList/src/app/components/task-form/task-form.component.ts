@@ -15,9 +15,10 @@ export class TaskFormComponent {
   public newTask = new Task();
 
   submitTask(form: NgForm){
+    // FORM DRIVEN
     // form é a variavel criada dentro do meu formulario para validar o envio
     if(!form.valid) return
-    
+
     // como parâmetro da função addTask coloca o valor q quer mandar para o PAI
     // Quando apertar no botão (submitTask) vai enviar as informações (this.nweTask) pro Pai
     // {...} >>> pra criar uma referencia pra cada task nova
@@ -26,6 +27,7 @@ export class TaskFormComponent {
     // NÃO PRECISA DESESTRTURAR POR QUE NAO VAI TER MAIS O PROBLEMA DE REFENCIA COM DO OBJETO
     this.addTask.emit(this.newTask);
     this.newTask = new Task();
+    form.reset()
     // console.log(this.newTask)
   }
 

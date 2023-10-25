@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskFormComponent } from './components/task-form/task-form.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,7 @@ import { ExemploFilhoComponent } from './components/exemplo-filho/exemplo-filho.
 import { BgRedDirective } from './directives/bg-red.directive';
 import { DateWarningDirective } from './directives/date-warning.directive';
 import { TaskFilterComponent } from './components/task-filter/task-filter.component';
+import { TaskFormReactiveComponent } from './components/task-form-reactive/task-form-reactive.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,15 @@ import { TaskFilterComponent } from './components/task-filter/task-filter.compon
     ExemploFilhoComponent,
     BgRedDirective,
     DateWarningDirective,
-    TaskFilterComponent
+    TaskFilterComponent,
+    TaskFormReactiveComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,10 @@
     <h1 class="py-2 bg-dark fw-bold text-white">TO<span class="text-warning">DO</span><span class="fw-light">LIST</span></h1>
 </div>
 
+<h1 class="text-center">Form Reactive</h1>
+<app-task-form-reactive (addTask)="onAddTask($event)"></app-task-form-reactive>
+
+<h1 class="text-center mt-5">Form driven</h1>
 <app-task-form (addTask)="onAddTask($event)"></app-task-form>
 
 

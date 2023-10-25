@@ -113,9 +113,8 @@ export class AppComponent implements OnInit, Remover{
   }
 
   remover(): void {}
-
   onAddTask(task: Task) {
-    // console.log(task)
+  // console.log(task)
   // na lista de tasks vai ser adicionada uma nova task. Essa nova task é a task enviada pelo form
     this.listTask.push(task)
     // this.listTask.push(new Task(task));
