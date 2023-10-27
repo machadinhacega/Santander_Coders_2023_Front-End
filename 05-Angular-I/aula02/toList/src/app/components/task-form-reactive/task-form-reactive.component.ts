@@ -11,7 +11,7 @@ export class TaskFormReactiveComponent {
 
   public form: FormGroup = this.formBuilder.group({
     // o primeiro parametro é o valor inicial do meu input, deposi vêm meus validadores
-    title: ['', Validators.required],
+    title: ['', Validators.required, Validators.min(3)],
     // Mais de uma validação:
     // title: ['', [Validators.required, Validators.email]],
     description: ['', Validators.required],

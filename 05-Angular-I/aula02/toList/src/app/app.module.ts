@@ -16,6 +16,7 @@ import { BgRedDirective } from './directives/bg-red.directive';
 import { DateWarningDirective } from './directives/date-warning.directive';
 import { TaskFilterComponent } from './components/task-filter/task-filter.component';
 import { TaskFormReactiveComponent } from './components/task-form-reactive/task-form-reactive.component';
+import { DateMaskDirective } from './directives/date-mask.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TaskFormReactiveComponent } from './components/task-form-reactive/task-
     BgRedDirective,
     DateWarningDirective,
     TaskFilterComponent,
-    TaskFormReactiveComponent
+    TaskFormReactiveComponent,
+    DateMaskDirective
   ],
   imports: [
     BrowserModule,

@@ -14,8 +14,14 @@
                 class="h-25 py-3 rounded-2 border-1 ps-2 text-dark"
                 formControlName="title"
                 >
-                <div *ngIf="form.get('title')?.invalid && form.get('title')?.touched">
-                    <p class="mb-0 text-danger">Nome obrigatório</p>
+                <!-- <p class="mb-0 text-danger">{{}}</p> -->
+                <!-- hasError especifica qual o erro que quero pegar -->
+                <div *ngIf="form.get('title')?.hasError('required') && form.get('title')?.touched">
+                    <p class="mb-0 text-danger">Titulo obrigatório</p>
+                </div>
+                <!-- hasError especifica qual o erro que quero pegar -->
+                <div *ngIf="form.get('title')?.hasError('min')">
+                    <p class="mb-0 text-danger">Nome precisa ter mais de 3 letras</p>
                 </div>
 
             </div>
@@ -56,11 +62,24 @@
 
 
         </div>
-        <div class="d-flex align-items-center mt-2">
+        <!-- <div class="d-flex align-items-center mt-2">
             <label for="date" class="me-2 w-50">Data de entrega da tarefa:</label>
             <input 
             id="date" 
             type="date" 
+            name="date" 
+            class="rounded-2 border-1 py-2 ps-2 w-50"
+            formControlName="date">    
+        </div>       
+        <div *ngIf="form.get('date')?.invalid && form.get('date')?.touched">
+            <p class="text-end mb-0 text-danger">Selecione uma data</p>    
+        </div> -->
+        <div class="d-flex align-items-center mt-2">
+            <label for="date" class="me-2 w-50">Data de entrega da tarefa:</label>
+            <input 
+            id="date" 
+            type="text" 
+            appDateMask
             name="date" 
             class="rounded-2 border-1 py-2 ps-2 w-50"
             formControlName="date">    
