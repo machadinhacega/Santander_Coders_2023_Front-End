@@ -15,8 +15,11 @@ export class DateMaskDirective {
     const input = event.target as HTMLInputElement;
     const value = input.value;
 
-    // const valueTratado = value.replace('/','')
-    // USANDO REGEX
+    // remover barras para nao contar no length
+    // USANDO SO REPLACE
+    // let apenasNumeros = value.replace('/','')
+    // apenasNumeros = apenasNumeros.replace('/','')
+    // USANDO REGEX para remover TODAS as barras
     const apenasNumeros = value.replace(/\D/g, '')
 
     // debugger
@@ -25,7 +28,7 @@ export class DateMaskDirective {
     // 00/00/0000/
 
     if(value.length >= 6){
-      input.value = `${apenasNumeros.slice(0,2)}/${apenasNumeros.slice(2,4)}/${apenasNumeros.slice(4)}`
+      input.value = `${apenasNumeros.slice(0,2)}/${apenasNumeros.slice(2,4)}/${apenasNumeros.slice(4,8)}`
       return}
 
     if(value.length >= 3){
@@ -35,7 +38,7 @@ export class DateMaskDirective {
     input.value = apenasNumeros
   }
 
-  
+
   constructor() { }
 
 }

@@ -112,6 +112,12 @@ export class AppComponent implements OnInit, Remover{
 
   }
 
+  // Se a gente quiser usar essa logica em varias partes do codigo, podemos só usar um get para nao repetir o codigo
+  // get toDoStatus(){
+  //   return this.listTask.filter(item => item.status === 'toDO')
+  // }
+
+
   remover(): void {}
   onAddTask(task: Task) {
   // console.log(task)
