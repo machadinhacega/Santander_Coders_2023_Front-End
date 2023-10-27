@@ -29,7 +29,7 @@
 </div>
 <div *ngIf = "isVisible">
     <!-- handleTask esta no task.list.ts            | handleTaskApp esta no app.ts          -->
-    <app-task-list [tasks]="listTask" (handleTask)="handleTaskApp($event)"></app-task-list>
+    <app-task-list  [tasks]="listTask" (handleTask)="handleTaskApp($event)"></app-task-list>
 </div>
 
 

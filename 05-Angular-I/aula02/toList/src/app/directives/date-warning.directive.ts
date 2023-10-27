@@ -12,19 +12,26 @@ export class DateWarningDirective {
   constructor(private element: ElementRef) { }
 
   ngOnInit(){
-    if(this.task.status == "done"){
-      this.element.nativeElement.style.background = "green"
-      this.element.nativeElement.style.color = "#fff"
+    const dateTask = new Date(this.task.date)
+    const dateToday = new Date()
+    
+    if(dateTask < dateToday){
+      this.element.nativeElement.style.color = 'red'
     }
-    // a data da tarefa foi convertida para uma new Date para ficar no mesmo padrão Date 
-    else if(new Date(this.task.date) < new Date()){
-      this.element.nativeElement.style.background = 'red'
-      this.element.nativeElement.style.color = "#fff"
-    }
+    // this.element.nativeElement.style.background = 'blue'
+    // if(this.task.status == "done"){
+    //   this.element.nativeElement.style.background = "green"
+    //   this.element.nativeElement.style.color = "#fff"
+    // }
+    // // a data da tarefa foi convertida para uma new Date para ficar no mesmo padrão Date 
+    // else if(new Date(this.task.date) < new Date()){
+    //   this.element.nativeElement.style.background = 'red'
+    //   this.element.nativeElement.style.color = "#fff"
+    // }
 
     console.log('DIRECTIVE')
-    console.log(this.task.date)
-    console.log(new Date(this.task.date))
+    // console.log(this.task.date)
+    // console.log(new Date(this.task.date))
     // console.log(typeof(this.task.date.at(-1)))
 
     // this.element.nativeElement.style.background = "red"

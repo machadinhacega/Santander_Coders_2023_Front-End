@@ -8,7 +8,8 @@
                 <ng-container *ngFor="let task of tasks">
                     <div *ngIf="task.status == titulo" class="rounded-1 border border-2 p-2 mb-3" (click)="selectedTask(task)">
                         <h5 class="mb-0">{{task.title}}</h5>
-                        <p class="my-0">Data de entrega: {{task.date | date:'dd/MM'}}</p>
+                        <h5 class="mb-0">{{task.valor | currencyFormat: 'BRL'}}</h5>
+                        <p class="my-0"  appDateWarning [task] = "task">Data de entrega: {{task.date | date:'dd/MM'}}</p>
                         <!-- <p class="mt-0 fs-6 fw-light">{{task.description}}</p> -->
                     </div>
                 </ng-container>

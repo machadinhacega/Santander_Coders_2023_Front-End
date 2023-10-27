@@ -56,58 +56,69 @@ export class AppComponent implements OnInit, Remover{
   ngOnInit(){
     console.log('INICIEI APP')
     this.listTask.push({
-      date: new Date('2023-11-02'),
+      date: new Date('11/02/2023'),
       description: 'tarefa adicionada pelo metodo OnInit',
       title: 'Tarefa OnInit',
-      status: 'toDO'
+      status: 'toDO',
+      valor: '4.20'
     })
     this.listTask.push({
-      date: new Date('2023-11-02'),
-      title: 'Coringar',
-      description: 'HAHAHAHAHHAHAHA',
-      status: 'doing'
-    })
-    this.listTask.push({
-      date: new Date('2023-11-02'),
-      description: 'sempre',
-      title: 'Sofrer',
-      status: 'done'
-    })
-    this.listTask.push({
-      date: new Date('2023-11-02'),
+      date: new Date('10/22/2023'),
       description: 'às 23:47',
       title: 'Ir de arrasta',
-      status: 'toDO'
+      status: 'toDO',
+      valor: '4.20'
     })
     this.listTask.push({
-      date: new Date('2023-11-02'),
-      description: 'simbora',
-      title: 'Estudar ne',
-      status: 'done'
-    })
-    this.listTask.push({
-      date: new Date('2023-11-02'),
+      date: new Date('11/02/2023'),
       description: 'às 23:47 também',
       title: 'Submarinar',
-      status: 'toDO'
+      status: 'toDO',
+      valor: '4.20'
+    })
+
+
+    this.listTask.push({
+      date: new Date('08/22/2023'),
+      title: 'Coringar',
+      description: 'HAHAHAHAHHAHAHA',
+      status: 'doing',
+      valor: '4.20'
     })
     this.listTask.push({
-      date: new Date('2023-11-02'),
+      date: new Date('11/02/2023'),
       description: 'todos os dias',
       title: 'Se indignar',
-      status: 'doing'
+      status: 'doing',
+      valor: '4.20'
     })
     this.listTask.push({
-      date: new Date('2023-11-02'),
+      date: new Date('11/02/2023'),
+      description: 'sempre',
+      title: 'Sofrer',
+      status: 'done',
+      valor: '4.20'
+    })  
+    this.listTask.push({
+      date: new Date('11/02/2023'),
+      description: 'simbora',
+      title: 'Estudar ne',
+      status: 'done',
+      valor: '4.20'
+    })
+    this.listTask.push({
+      date: new Date('11/02/2023'),
       description: 'izimaliacoisalindademeudeuso',
       title: 'Fazer carinho na gata',
-      status: 'done'
+      status: 'done',
+      valor: '4.20'
     })
     this.listTask.push({
-      date: new Date('2023-11-02'),
+      date: new Date('11/02/2023'),
       description: 'vagabundo vei',
       title: 'Xingar o vizinho',
-      status: 'done'
+      status: 'done',
+      valor: '4.20'
     })
 
   }

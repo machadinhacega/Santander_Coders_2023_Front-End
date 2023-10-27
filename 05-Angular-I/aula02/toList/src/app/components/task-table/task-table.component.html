@@ -13,7 +13,7 @@
                 <tr *ngFor="let task of listTaskToTable">
                     <td>{{task.title}}</td>
                     <td>{{task.description}}</td>
-                    <td>{{task.date}}</td>
+                    <td>{{task.date | date: 'dd/MM/yyyy'}}</td>
                 </tr>
             </tbody>
         </table>
