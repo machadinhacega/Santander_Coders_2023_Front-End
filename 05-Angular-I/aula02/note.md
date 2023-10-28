@@ -18,8 +18,11 @@ task-lista ( Que é nosso kanban com as colunas)
 task-logs (Log, quando clica na task, vai para o logs, lembrando que ela é bem parecida com o detail a diferença q ela é uma lista de click e pode conter tarefas repetidas)
 Adicionar o editar (Obs usar o mesmo task-forms (Reativo))
 
-❌ Editar (Extra)
+❌
+Adicionar o editar (Obs usar o mesmo task-forms (Reativo)) 
 
+✅ 
+Adicionar Tags no formulario Reativo
 
 ### Directivas
 

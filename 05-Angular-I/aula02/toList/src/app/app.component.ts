@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Output } from '@angular/core';
 import { Task } from 'src/models/task.model';
 
 
@@ -48,6 +48,16 @@ export class AppComponent implements OnInit, Remover{
 
   diretiveNumber = 25
 
+  @Output() taskEdit = {
+    title: 'Nascer',
+    status: 'done',
+    valor: '0',
+    description: 'coitada',
+    date: new Date('30/04/1994'),
+    tags: ['tagC', 'tagE']
+  }
+
+
   constructor(){
     console.log('constructor')
   }
@@ -60,21 +70,24 @@ export class AppComponent implements OnInit, Remover{
       description: 'tarefa adicionada pelo metodo OnInit',
       title: 'Tarefa OnInit',
       status: 'toDO',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })
     this.listTask.push({
       date: new Date('10/22/2023'),
       description: 'às 23:47',
       title: 'Ir de arrasta',
       status: 'toDO',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })
     this.listTask.push({
       date: new Date('11/02/2023'),
       description: 'às 23:47 também',
       title: 'Submarinar',
       status: 'toDO',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })
 
 
@@ -83,42 +96,48 @@ export class AppComponent implements OnInit, Remover{
       title: 'Coringar',
       description: 'HAHAHAHAHHAHAHA',
       status: 'doing',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })
     this.listTask.push({
       date: new Date('11/02/2023'),
       description: 'todos os dias',
       title: 'Se indignar',
       status: 'doing',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })
     this.listTask.push({
       date: new Date('11/02/2023'),
       description: 'sempre',
       title: 'Sofrer',
       status: 'done',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })  
     this.listTask.push({
       date: new Date('11/02/2023'),
       description: 'simbora',
       title: 'Estudar ne',
       status: 'done',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })
     this.listTask.push({
       date: new Date('11/02/2023'),
       description: 'izimaliacoisalindademeudeuso',
       title: 'Fazer carinho na gata',
       status: 'done',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })
     this.listTask.push({
       date: new Date('11/02/2023'),
       description: 'vagabundo vei',
       title: 'Xingar o vizinho',
       status: 'done',
-      valor: '4.20'
+      valor: '4.20',
+      tags: ['tagA', 'tagB']
     })
 
   }
@@ -146,6 +165,11 @@ export class AppComponent implements OnInit, Remover{
   //  Quando clicar no ngFor (app.html) vai passar o valor da task (task of tasks) para a função handle e receber aqui
   handleTaskApp(task: Task){
     this.selectedTask = task;
+    
+    // EDITAR
+    this.taskEdit = this.selectedTask
+    // console.log(this.selectedTask)
+    console.log(this.taskEdit)
 
     // alem de selecionar a task, vou dar um PUSH para a lista da TABELA
     this.listTaskToTable.push(task)
@@ -157,5 +181,13 @@ export class AppComponent implements OnInit, Remover{
     this.selectedTask = null;
   }
 
+
+  onEditTask(task: Task) {
+    alert('pronto pra editar')
+    // console.log(task)
+    // na lista de tasks vai ser adicionada uma nova task. Essa nova task é a task enviada pelo form
+    // this.listTask.push(task)
+    // this.listTask.push(new Task(task));
+    }
  
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { dateLessThanValidator } from 'src/app/validators/dateLessThan.validator';
 import { Task } from 'src/models/task.model';
@@ -8,9 +8,15 @@ import { Task } from 'src/models/task.model';
   templateUrl: './task-form-reactive.component.html',
   styleUrls: ['./task-form-reactive.component.scss']
 })
-export class TaskFormReactiveComponent {
+export class TaskFormReactiveComponent implements OnInit {
 
-  tags: string[] = []
+  // EDITAR
+  @Input() task: Task | null = null
+  
+  // OUTRA FORMA DE INICIAR O EDITAR
+  // @Input() isEdit: boolean = false;
+
+  // tags: string[] = []
 
   public form: FormGroup = this.formBuilder.group({
     // o primeiro parametro é o valor inicial do meu input, deposi vêm meus validadores
@@ -37,6 +43,7 @@ export class TaskFormReactiveComponent {
 
   @Output() addTask = new EventEmitter()
 
+  @Output() editTask = new EventEmitter()
 
   // Precisamos de um constructor para injetar uma dependencia, colocar um serviço aqui dentro
   // "formBuilder" poderia ser qualquer nome.
@@ -50,6 +57,31 @@ export class TaskFormReactiveComponent {
     return this.form.get('tags') as FormArray;
   }
 
+
+
+  ngOnInit(){
+    // this.form.setValue({title: this.task?.title, 
+    //                     description: this.task?.description,
+    //                     valor:this.task?.valor,
+    //                     status:this.task?.status,
+    //                     tags:this.task?.tags,
+    //                     date:this.task?.date,
+    //                   })
+    
+    // this.form.setValue({...this.task})
+
+    this.form.patchValue({...this.task})
+
+    this.task?.tags?.forEach(item =>{
+      this.addTag(item)
+    })
+
+
+
+  }
+
+
+
   submitTask(){
     // console.log(this.form.value)
     // console.log('invalid', this.form.invalid)
@@ -62,12 +94,18 @@ export class TaskFormReactiveComponent {
     
   }
 
-  addTag(){
+  addTag(value = ''){
     // MESMA COISA:
     // this.form.get('tags')
     // this.myTags
     
     // Validando o formulário nesse nível, estou requerindo que as tags que forem abertas sejam preenchidas com algum texto 
-    this.myTags.push(this.formBuilder.control('', Validators.required))
+    this.myTags.push(this.formBuilder.control(value, Validators.required))
   }
+
+  resubmitTask(){
+    this.editTask.emit(this.form.value)
+  }
+
+  
 }

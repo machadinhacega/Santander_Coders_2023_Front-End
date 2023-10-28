@@ -29,7 +29,7 @@ export class DateWarningDirective {
     //   this.element.nativeElement.style.color = "#fff"
     // }
 
-    console.log('DIRECTIVE')
+    // console.log('DIRECTIVE')
     // console.log(this.task.date)
     // console.log(new Date(this.task.date))
     // console.log(typeof(this.task.date.at(-1)))

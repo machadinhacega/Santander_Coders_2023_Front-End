@@ -10,7 +10,9 @@
                         <h5 class="mb-0">{{task.title}}</h5>
                         <h5 class="mb-0">{{task.valor | currencyFormat: 'BRL'}}</h5>
                         <p class="my-0"  appDateWarning [task] = "task">Data de entrega: {{task.date | date:'dd/MM'}}</p>
-                        <!-- <p class="mt-0 fs-6 fw-light">{{task.description}}</p> -->
+                        <div class="d-flex">
+                            <p *ngFor="let tag of task.tags" class="me-3 bg-warning text-white">{{tag}}</p>
+                        </div>
                     </div>
                 </ng-container>
             </div>
