@@ -13,6 +13,7 @@ export class TaskFormReactiveComponent implements OnInit {
   // EDITAR
   @Input() task: Task | null = null
   
+  
   // OUTRA FORMA DE INICIAR O EDITAR
   // @Input() isEdit: boolean = false;
 
@@ -44,6 +45,7 @@ export class TaskFormReactiveComponent implements OnInit {
   @Output() addTask = new EventEmitter()
 
   @Output() editTask = new EventEmitter()
+  
 
   // Precisamos de um constructor para injetar uma dependencia, colocar um serviço aqui dentro
   // "formBuilder" poderia ser qualquer nome.
@@ -101,10 +103,6 @@ export class TaskFormReactiveComponent implements OnInit {
     
     // Validando o formulário nesse nível, estou requerindo que as tags que forem abertas sejam preenchidas com algum texto 
     this.myTags.push(this.formBuilder.control(value, Validators.required))
-  }
-
-  resubmitTask(){
-    this.editTask.emit(this.form.value)
   }
 
   

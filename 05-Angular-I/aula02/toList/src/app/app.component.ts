@@ -168,8 +168,8 @@ export class AppComponent implements OnInit, Remover{
     
     // EDITAR
     this.taskEdit = this.selectedTask
-    // console.log(this.selectedTask)
     console.log(this.taskEdit)
+    
 
     // alem de selecionar a task, vou dar um PUSH para a lista da TABELA
     this.listTaskToTable.push(task)
